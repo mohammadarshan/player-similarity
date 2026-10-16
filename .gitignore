@@ -1,0 +1,17 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets and local config
+.env
+
+# MLflow local runs
+mlruns/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
