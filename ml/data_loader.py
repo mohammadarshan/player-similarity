@@ -9,7 +9,7 @@ from statsbombpy import sb
 
 warnings.filterwarnings("ignore", message="credentials were not supplied.")
 
-LEAGUES = ["Premier League", "LaLiga", "Serie A", "Ligue 1"]
+LEAGUES = ["Premier League", "La Liga", "Serie A", "Ligue 1"]
 SEASONS = "2015/2016"
 RAW_DIR = Path("data/raw")
 
