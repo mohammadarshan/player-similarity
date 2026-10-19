@@ -1,6 +1,7 @@
 """Compute minutes played per player for one match from StatsBomb events."""
 import pandas as pd
 from pathlib import Path
+from ml.teams import clean_team_names
 
 def match_minutes(events: pd.DataFrame) -> pd.DataFrame:
     events = events.sort_values("index")
@@ -36,6 +37,7 @@ def match_minutes(events: pd.DataFrame) -> pd.DataFrame:
     df = df.reset_index()
     df["minutes"] = df["end"] - df["start"]
     df["match_id"] = int(events["match_id"].iloc[0])
+    df["team"] = clean_team_names(df["team"])   
     return df[["match_id", "player_id", "player", "team", "minutes"]]
 
 if __name__ == "__main__":
