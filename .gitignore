@@ -15,6 +15,3 @@ mlruns/
 .vscode/
 .idea/
 .DS_Store
-
-# Raw data (will be handled by DVC later)
-data/
